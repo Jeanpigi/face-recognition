@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    /* Good for rem calculations */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    /* Para posicionar el canvas relativo a este contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
+    /* Puedes ajustar esto o hacerlo responsivo */
+    height: 560px;
+    /* Puedes ajustar esto o hacerlo responsivo */
+    overflow: hidden;
+    /* Para manejar cualquier desbordamiento */
+}
+
+video,
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+canvas {
+    z-index: 10;
+    /* Asegura que el canvas esté sobre el vídeo */
+}
+
+#toggleDetection {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    /* Tamaño de fuente mayor para legibilidad */
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+#toggleDetection:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
